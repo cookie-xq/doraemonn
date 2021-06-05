@@ -97,6 +97,24 @@ body {
     z-index: 1;
 }
 
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(15deg);
+    }
+
+    66% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .head2 .nose {
     position: absolute;
     border: 2px solid black;
@@ -107,6 +125,7 @@ body {
     top: 26px;
     border-radius: 50%;
     background: #ff0000;
+    animation: shake 1000ms linear infinite;
 }
 
 .head2 .nose::before {
